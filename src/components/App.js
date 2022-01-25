@@ -1,12 +1,31 @@
+import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 import Header from "./Header";
-// import DataApi from "./DataApi";
+import getDataFromApi from "../services/DataApi";
 // import LocalStorage from "./LocalStorage";
 
+//Services
+
 function App() {
+  //Estados
+  const [dataList, setDataList] = useState(["gryffindor"]);
+
+  //useEffect Fetch
+  useEffect(() => {
+    getDataFromApi().then((characterData) => {
+      setDataList(characterData);
+      console.log(characterData);
+    });
+  }, []);
+
+  //Funciones manejadoras de filtros
+
   return (
-    <div className="App">
-      <p>Hola Mundo</p>
+    <div>
+      <Header className="logo" />
+
+      <main className="main"></main>
+      {/* <Footer /> */}
     </div>
   );
 }
