@@ -1,0 +1,27 @@
+.cardList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid #ffc500;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #7f0909;
+  list-style: none;
+  margin: 15px;
+  height: 380px;
+  width: 270px;
+  transition: all ease 0.5s;
+
+  &:hover {
+    border: solid #7f0909 3px;
+    background-color: #ffc500;
+    box-shadow: 5px 5px 10px #ffc500;
+    transform: translate(-3px, -3px);
+  }
+  &__complete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+  }
+}

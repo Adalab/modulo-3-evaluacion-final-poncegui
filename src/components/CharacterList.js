@@ -12,7 +12,7 @@ const CharacterList = (props) => {
   });
   return (
     <section>
-      <ul className="card__list">
+      <ul>
         {props.characters.length === 0 ? (
           <CharacterNotFound />
         ) : (

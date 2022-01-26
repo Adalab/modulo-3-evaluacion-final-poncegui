@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
 const alive = (
-  <p>
+  <li>
     Vive <i className="fa fa-heartbeat heart "></i>
-  </p>
+  </li>
 );
 
 const ghost = (
-  <p>
+  <li>
     Sin vida <i className="fas fa-skull skull"></i>
-  </p>
+  </li>
 );
 
 const CharacterDetail = (props) => {
@@ -45,16 +45,24 @@ const CharacterDetail = (props) => {
   return (
     <Link to="/">
       <>
-        <button>Volver</button>
-        <div>
-          <article className="card__detail">
-            <p>{dataDetail.name}</p>
-            <img src={dataDetail.image}></img>
-            <p>Estatus: {getStatus()}</p>
-            <p>Especie: {getSpecies()}</p>
-            <p>Género: {getGender()}</p>
-            <p>Casa: {dataDetail.house}</p>
-          </article>
+        <div className="cardDetail__container">
+          <button className="cardDetail__container--btn">
+            <i className="fas fa-quidditch"></i>
+          </button>
+          <div>
+            <article className="card__detail">
+              <div className="card__detail--photo">
+                <img className="cardDetail__img" src={dataDetail.image}></img>
+              </div>
+              <ul className="card__detail--description">
+                <li>{dataDetail.name}</li>
+                <li>Estatus: {getStatus()}</li>
+                <li>Especie: {getSpecies()}</li>
+                <li>Género: {getGender()}</li>
+                <li>Casa: {dataDetail.house}</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </>
     </Link>
