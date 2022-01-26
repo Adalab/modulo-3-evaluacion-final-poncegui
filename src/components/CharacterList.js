@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
 
 const CharacterList = (props) => {
@@ -10,7 +11,7 @@ const CharacterList = (props) => {
   });
   return (
     <section>
-      <ul>{characterElements}</ul>
+      <ul className="card__list">{characterElements}</ul>
     </section>
   );
 };

@@ -1,9 +1,14 @@
-import logo from "../images/title-logo.png";
+import logo from "../images/logo.png";
 
 const Header = () => {
   return (
     <header className="header">
-      <img className="logo" src={logo} alt="Logo" title="Logo" />
+      <img
+        className="logo"
+        src={logo}
+        alt="Harry Potter"
+        title="Harry Potter"
+      />
     </header>
   );
 };

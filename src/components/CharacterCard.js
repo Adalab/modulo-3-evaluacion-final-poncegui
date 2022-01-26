@@ -4,13 +4,19 @@ const CharacterCard = (props) => {
   return (
     <>
       <img
-        className="img"
-        src={props.character.image}
+        className="card__preview"
+        src={
+          props.character.image
+            ? props.character.image
+            : "https://via.placeholder.com/210x295/ffffff/666666/?text=gyr"
+        }
         alt={`Foto de ${props.character.name}`}
         title={`Foto de ${props.character.name}`}
       />
+      <div className="card__text"></div>
       <h4>{props.character.name}</h4>
       <p>{props.character.species}</p>
+      <p>{props.character.house}</p>
     </>
   );
 };

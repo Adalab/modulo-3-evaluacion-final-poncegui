@@ -1,22 +1,20 @@
-import filterCharacter from "./FilterCharacter";
-import filterHouse from "./FilterHouse";
+import FilterCharacter from "./FilterCharacter";
+import FilterHouse from "./FilterHouse";
 
-const filter = (props) => {
+const Filter = (props) => {
   return (
     <section>
-      <form>
-        <FilterName
+      <form className="form" onSubmit={(ev) => ev.preventDefault()}>
+        <FilterCharacter
           handleFilter={props.handleFilter}
-          filterName={props.filterName}
+          inputSearch={props.inputSearch}
         />
-        <FilterGender
+        <FilterHouse
           handleFilter={props.handleFilter}
-          filterGender={props.filterGender}
+          selectHouse={props.dataHouse}
         />
-
-        <FilterCity />
       </form>
     </section>
   );
 };
-export default filter;
+export default Filter;

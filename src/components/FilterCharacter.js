@@ -1,28 +1,25 @@
-const filterCharacter = (props) => {
+const FilterCharacter = (props) => {
   const handleInput = (ev) => {
-    props.handleChangeFilter({
-      value: ev.target.value,
-      id: "name",
+    props.handleFilter({
+      key: "name",
+      value: ev.currentTarget.value,
     });
   };
 
   return (
-    <>
-      <label className="form" htmlFor="name">
-        Buscar personaje:
+    <section>
+      <label className="form__label" htmlFor="name">
+        Busca por personaje:
       </label>
       <input
-        className="form__input-text"
         type="text"
-        name="name"
         id="name"
-        key="name"
-        placeholder="Ej. Scorpius"
-        value={props.searchName}
+        name="name"
+        value={props.inputSearch}
         onChange={handleInput}
       />
-    </>
+    </section>
   );
 };
 
-export default filterCharacter;
+export default FilterCharacter;

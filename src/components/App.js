@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 // import { Route, Switch, useRouteMatch } from "react-router-dom";
-import "../styles/App.css";
+import "../styles/App.scss";
 import Header from "./Header";
 import getDataFromApi from "../services/DataApi";
 import CharacterList from "./CharacterList";
+import Filters from "./Filters";
+import Footer from "./Footer";
 
 //Services
 
 function App() {
   //Estados
-  const [dataDefault, setDataDefault] = useState(["gryffindor"]);
+  const [dataHouse, setDataHouse] = useState("Gryffindor");
+  const [inputSearch, setInputSearch] = useState("");
   const [dataList, setDataList] = useState([]);
 
   useEffect(() => {
@@ -19,13 +22,41 @@ function App() {
     });
   }, []);
 
+  //Funcion manejadora para filtros
+  const handleFilter = (data) => {
+    if (data.key === "name") {
+      setInputSearch(data.value);
+    } else if (data.key === "house") {
+      setDataHouse(data.value);
+    }
+  };
+
+  //Filtros aplicados; character & house
+
+  const characterFiltered = dataList
+    .filter((character) => {
+      return character.name.toLowerCase().includes(inputSearch.toLowerCase());
+    })
+    .filter((character) => {
+      if (dataHouse === "Gryffindor") {
+        return true;
+      } else if (dataHouse === character.house) {
+        return character.house;
+      }
+    });
+
   return (
     <div>
       <Header className="logo" />
-
       <main className="main">
-        <CharacterList characters={dataList} />
+        <Filters
+          handleFilter={handleFilter}
+          inputSearch={inputSearch}
+          selectHouse={dataHouse}
+        />
+        <CharacterList characters={characterFiltered} />
       </main>
+      <Footer />
     </div>
   );
 }

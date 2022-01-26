@@ -1,0 +1,72 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 1rem;
+  box-sizing: border-box;
+
+  &__input-text {
+    margin: 0.6rem 0.6rem 0.6rem 1rem;
+    width: 14rem;
+    border: solid 3px orange;
+    padding: 0.4rem;
+    border-radius: 2px;
+    color: grey;
+    ::placeholder {
+      color: orange;
+    }
+    ::value {
+      color: orange;
+    }
+  }
+
+  &__input-select {
+    margin: 0.6rem;
+    border: solid 3px orange;
+    padding: 0.4rem;
+    border-radius: 2px;
+    color: grey;
+
+    ::value {
+      color: orange;
+    }
+  }
+  &__container-checked {
+    margin-left: 0.6rem;
+    scroll-margin-right: 0.6rem;
+  }
+  &__label-checked {
+    color: orange;
+    font-size: 0.9rem;
+  }
+
+  &__input-status {
+    margin: 0.6rem;
+    border: solid 3px orange;
+    padding: 0.4rem;
+    border-radius: 2px;
+    color: grey;
+
+    ::value {
+      color: orange;
+    }
+  }
+}
+
+.resetButton {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+  border: 2px solid orange;
+  background-color: orange;
+  color: #fff;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  margin-left: 0.6rem;
+  height: 2.3rem;
+
+  &:hover {
+    border-color: grey;
+    background-color: grey;
+  }
+}
