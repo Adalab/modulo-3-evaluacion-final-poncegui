@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-// import { Route, Switch, useRouteMatch } from "react-router-dom";
-import "../styles/App.scss";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
+import "../styles/main.scss";
+
 import Header from "./Header";
 import getDataFromApi from "../services/DataApi";
 import CharacterList from "./CharacterList";
+import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
 import Footer from "./Footer";
 
@@ -16,11 +18,10 @@ function App() {
   const [dataList, setDataList] = useState([]);
 
   useEffect(() => {
-    getDataFromApi().then((characterData) => {
-      setDataList(characterData);
-      console.log(characterData);
+    getDataFromApi(dataHouse).then((response) => {
+      setDataList(response);
     });
-  }, []);
+  }, [dataHouse]);
 
   //Funcion manejadora para filtros
   const handleFilter = (data) => {
@@ -45,16 +46,35 @@ function App() {
       }
     });
 
+  const dataUser = useRouteMatch(`/character/:id`);
+
+  const characterDetail = () => {
+    if (dataUser) {
+      const routeIdcharacter = dataUser.params.id;
+      const findIdcharacter = dataList.find((character) => {
+        return character.id === routeIdcharacter;
+      });
+      return findIdcharacter || {};
+    }
+  };
+
   return (
     <div>
       <Header className="logo" />
       <main className="main">
-        <Filters
-          handleFilter={handleFilter}
-          inputSearch={inputSearch}
-          selectHouse={dataHouse}
-        />
-        <CharacterList characters={characterFiltered} />
+        <Switch>
+          <Route exact path="/">
+            <Filters
+              handleFilter={handleFilter}
+              inputSearch={inputSearch}
+              selectHouse={dataHouse}
+            />
+            <CharacterList characters={characterFiltered} />
+          </Route>
+          <Route path="/character/:id">
+            <CharacterDetail characterDetail={characterDetail()} />
+          </Route>
+        </Switch>
       </main>
       <Footer />
     </div>
