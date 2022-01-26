@@ -17,6 +17,7 @@ function App() {
   const [dataHouse, setDataHouse] = useState("Gryffindor");
   const [inputSearch, setInputSearch] = useState("");
   const [dataList, setDataList] = useState([]);
+  const [dataGender, setDataGender] = useState("all");
 
   useEffect(() => {
     getDataFromApi(dataHouse).then((response) => {
@@ -30,6 +31,8 @@ function App() {
       setInputSearch(data.value);
     } else if (data.key === "house") {
       setDataHouse(data.value);
+    } else if (data.key === "gender") {
+      setDataGender(data.value);
     }
   };
 
@@ -45,8 +48,14 @@ function App() {
       } else if (dataHouse === character.house) {
         return character.house;
       }
+    })
+    .filter((character) => {
+      if (dataGender === "all") {
+        return true;
+      } else if (dataGender === character.gender) {
+        return character.gender;
+      }
     });
-
   const dataUser = useRouteMatch(`/character/:id`);
 
   const characterDetail = () => {
@@ -69,6 +78,7 @@ function App() {
               handleFilter={handleFilter}
               inputSearch={inputSearch}
               selectHouse={dataHouse}
+              selectGender={dataGender}
             />
             <CharacterList characters={characterFiltered} />
           </Route>

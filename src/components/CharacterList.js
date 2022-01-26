@@ -12,7 +12,7 @@ const CharacterList = (props) => {
   });
   return (
     <section>
-      <ul>
+      <ul className="list__container">
         {props.characters.length === 0 ? (
           <CharacterNotFound />
         ) : (

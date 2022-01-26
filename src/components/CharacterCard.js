@@ -4,7 +4,7 @@ const CharacterCard = (props) => {
   return (
     <Link className="cardList" to={`character/${props.character.id}`}>
       <img
-        className="card__preview"
+        className="card__image"
         src={
           props.character.image
             ? props.character.image

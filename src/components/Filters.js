@@ -1,5 +1,6 @@
 import FilterCharacter from "./FilterCharacter";
 import FilterHouse from "./FilterHouse";
+import FilterGender from "./FilterGender";
 
 const Filter = (props) => {
   return (
@@ -12,6 +13,10 @@ const Filter = (props) => {
         <FilterHouse
           handleFilter={props.handleFilter}
           selectHouse={props.dataHouse}
+        />
+        <FilterGender
+          handleFilter={props.handleFilter}
+          selectGender={props.dataGender}
         />
       </form>
     </section>
