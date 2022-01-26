@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 
+// houses
+import Gryffindor from "../images/gryffindor.jpg";
+import Ravenclaw from "../images/ravenclaw.jpg";
+import Slytherin from "../images/slytherin.jpeg";
+import Hufflepuff from "../images/hufflepuff.png";
+
 const alive = (
   <li>
     Vive <i className="fa fa-heartbeat heart "></i>
@@ -42,19 +48,41 @@ const CharacterDetail = (props) => {
     }
   };
 
+  const getShield = () => {
+    if (dataDetail.house === "Gryffindor") {
+      return Gryffindor;
+    } else if (dataDetail.house === "Hufflepuff") {
+      return Hufflepuff;
+    } else if (dataDetail.house === "Slytherin") {
+      return Slytherin;
+    } else if (dataDetail.house === "Ravenclaw") {
+      return Ravenclaw;
+    }
+  };
+
   return (
-    <Link to="/">
+    <Link className="cardDetail" to="/">
       <>
         <div className="cardDetail__container">
           <button className="cardDetail__container--btn">
             <i className="fas fa-quidditch"></i>
           </button>
           <div>
-            <article className="card__detail">
-              <div className="card__detail--photo">
-                <img className="cardDetail__img" src={dataDetail.image}></img>
+            <article className="cardDetail__article">
+              <div className="cardDetail__article--photo">
+                <img
+                  src={dataDetail.image}
+                  alt="character image"
+                  title="character image"
+                ></img>
+                <img
+                  className="shield"
+                  src={getShield()}
+                  alt="House shield"
+                  title="House shield"
+                />
               </div>
-              <ul className="card__detail--description">
+              <ul className="cardDetail__article--description">
                 <li>{dataDetail.name}</li>
                 <li>Estatus: {getStatus()}</li>
                 <li>Especie: {getSpecies()}</li>

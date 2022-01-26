@@ -7,12 +7,12 @@ const FilterCharacter = (props) => {
   };
 
   return (
-    <section>
+    <section className="form">
       <label className="form__label" htmlFor="name">
         Busca por personaje:
       </label>
       <input
-        className="form__input-select"
+        className="form__label--select"
         type="text"
         id="name"
         name="name"

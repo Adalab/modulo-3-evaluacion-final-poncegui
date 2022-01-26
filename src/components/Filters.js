@@ -4,7 +4,7 @@ import FilterGender from "./FilterGender";
 
 const Filter = (props) => {
   return (
-    <section>
+    <section className="form">
       <form className="form" onSubmit={(ev) => ev.preventDefault()}>
         <FilterCharacter
           handleFilter={props.handleFilter}
@@ -19,6 +19,13 @@ const Filter = (props) => {
           selectGender={props.dataGender}
         />
       </form>
+      <button
+        className="form__btnReset"
+        type="submit"
+        onClick={props.handleBtn}
+      >
+        reset
+      </button>
     </section>
   );
 };

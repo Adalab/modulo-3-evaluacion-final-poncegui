@@ -12,7 +12,7 @@ const FilterGender = (props) => {
         Selecciona género:
       </label>
       <select
-        className="form__input-text"
+        className="form__input--text"
         name="Gender"
         id="Gender"
         value={props.selectHouse}

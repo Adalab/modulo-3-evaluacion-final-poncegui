@@ -1,11 +1,13 @@
 .cardDetail {
+  text-decoration: none;
   &__container {
-    padding-top: 50px;
+    padding: 50px 50px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     height: 100vh;
+    margin: auto;
 
     &--btn {
       width: 80px;
@@ -29,96 +31,48 @@
       flex-direction: row;
     }
   }
-  &__item {
+
+  &__article {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 2rem;
-    width: 17rem;
-    height: 30rem;
-    list-style: none;
-    border: 1px solid (127, 194, 241);
-    background-color: orange;
-    font-size: 0.8rem;
-    color: orange;
-    text-decoration: none;
-    @media all and (min-width: 768px) {
-      width: 36rem;
-      height: 17rem;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #7f0909;
+    padding: 20px;
+    background-color: #7f0909;
+
+    @media all and (min-width: 360px) {
+      flex-direction: row;
+    }
+
+    &--photo {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &--description {
+      list-style: none;
     }
   }
-  &__link {
-    text-decoration: none;
-    color: white;
-  }
-  &__img {
-    margin: 1rem;
-    width: 15rem;
-    border-radius: 30px;
-  }
-  &__title {
-    list-style: none;
-    text-decoration: none;
-    color: grey;
-    padding: 0.1rem;
-    font-size: 1.2rem;
-    width: 16rem;
-    font-weight: bold;
-  }
-  &__description {
-    text-decoration: none;
-    list-style: none;
-    color: white;
-    padding: 0.1rem;
-    font-size: 0.9rem;
-    width: 16rem;
-  }
-  &__text {
-    margin: auto;
-  }
-}
-.icon {
-  color: orange;
-  transform: scale(1.5);
-  margin-top: 1rem;
 }
 
 .heart {
   transform: scale(2);
   color: rgb(250, 207, 246);
-  margin: 0.6rem;
+  margin: 8px;
 }
 
 .skull {
   transform: scale(2);
   color: black;
-  margin: 0.6rem;
+  margin: 8px;
 }
 
 .unknown {
   transform: scale(2);
   color: black;
-  margin: 0.6rem;
+  margin: 8px;
 }
 
-.card__detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &--photo {
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-  }
-
-  &--description {
-    list-style: none;
-    .li {
-      text-decoration: none;
-    }
-  }
-  .li {
-    text-decoration: none;
-  }
+.shield {
+  background-color: red;
 }

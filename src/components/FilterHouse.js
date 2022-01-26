@@ -12,7 +12,7 @@ const FilterHouse = (props) => {
         Selecciona la casa:
       </label>
       <select
-        className="form__input-text"
+        className="form__input--text"
         name="House"
         id="House"
         value={props.selectHouse}

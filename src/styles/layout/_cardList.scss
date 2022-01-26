@@ -1,23 +1,28 @@
-.cardList {
+.card_Container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  // justify-content: flex-start;
   align-items: center;
-  border: 1px solid #ffc500;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px #7f0909;
+  box-shadow: 5px 5px 10px #928f6a;
   list-style: none;
   margin: 15px;
-  height: 300px;
-  width: 230px;
-  transition: all ease 0.5s;
+  height: 350px;
+  width: 280px;
+  transition: all ease 0.6s;
   text-decoration: none;
-  padding: 15px;
+  // padding: 15px;
+  background-color: rgba(31, 28, 27, 0.822);
+
+  @media all and (max-width: 768px) {
+    margin: auto;
+    margin-bottom: 25px;
+    height: 280px;
+    width: 200px;
+  }
 
   &:hover {
-    border: solid #7f0909 3px;
-    background-color: #ffc500;
-    box-shadow: 5px 5px 10px #ffc500;
+    background-color: #856a13;
+    box-shadow: 5px 5px 10px #97823c;
     transform: translate(-3px, -3px);
   }
 }
@@ -25,21 +30,14 @@
 .list__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   margin-top: 50px;
 
-  @media all and (max-width: 390px) {
-    grid-template-columns: 1fr;
+  @media all and (max-width: 320px) {
+    grid-template-columns: 100%;
     grid-template-rows: 1fr;
   }
 
   @media all and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  @media all and (min-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }

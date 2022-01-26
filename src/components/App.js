@@ -8,7 +8,6 @@ import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
 import Footer from "./Footer";
-import CharacterNotFound from "./CharacterNotFound";
 
 //Services
 
@@ -36,6 +35,14 @@ function App() {
     }
   };
 
+  //Reset Btn
+  const handleResetBtn = (ev) => {
+    ev.prevenDefault();
+    setDataHouse("Gryffindor");
+    setDataGender("all");
+    setInputSearch("");
+  };
+
   //Filtros aplicados; character & house
 
   const characterFiltered = dataList
@@ -56,6 +63,8 @@ function App() {
         return character.gender;
       }
     });
+
+  //Route
   const dataUser = useRouteMatch(`/character/:id`);
 
   const characterDetail = () => {
@@ -79,6 +88,7 @@ function App() {
               inputSearch={inputSearch}
               selectHouse={dataHouse}
               selectGender={dataGender}
+              handleResetBtn={handleResetBtn}
             />
             <CharacterList characters={characterFiltered} />
           </Route>

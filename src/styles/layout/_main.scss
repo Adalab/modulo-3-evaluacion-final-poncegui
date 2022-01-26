@@ -3,15 +3,6 @@ body {
   height: 100vh;
   width: 100%;
   margin: auto;
-  // @media all and (min-width: 768px) {
-  //   margin: 0px 50px;
-  // }
-  // @media all and (min-width: 1024px) {
-  //   margin: 0px 100px;
-  // }
-  // @media all and (min-width: 1300px) {
-  //   margin: auto
-  // }
 }
 
 .form {
@@ -20,10 +11,19 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-left: 15px;
   box-sizing: border-box;
+  margin: auto;
+  margin-top: 20px;
+  text-align: start;
 
-  &__input-text {
+  @media all and (max-width: 768px) {
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__input--text {
     margin: 10px;
     width: 200px;
     border: solid 3px orange;
@@ -38,15 +38,36 @@ body {
     }
   }
 
-  &__input-select {
-    margin: 5px;
+  &__label--select {
+    margin: 7px 0px 12px 0px;
     border: solid 3px orange;
     padding: 7px;
     border-radius: 2px;
     color: grey;
+    width: 180px;
 
     ::value {
-      color: orange;
+      color: rgb(122, 88, 25);
     }
   }
+
+  &__btnReset {
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: 1px rgb(122, 88, 25);
+    background-color: brown;
+    color: whitesmoke;
+    margin-top: 10px;
+    margin: auto;
+  }
+}
+
+.Not_found {
+  text-decoration: none;
+  color: #f0e7e7;
+}
+
+.fas fa-chevron-double-left {
+  color: #f0e7e7;
 }
