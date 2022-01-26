@@ -8,6 +8,7 @@ import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
 import Footer from "./Footer";
+import CharacterNotFound from "./CharacterNotFound";
 
 //Services
 
