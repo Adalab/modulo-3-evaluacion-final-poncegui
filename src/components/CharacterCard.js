@@ -11,7 +11,7 @@ const CharacterCard = (props) => {
         title={`Foto de ${props.character.name}`}
       />
       <div className="card__text">
-        <h4 className="card__tex--title">{props.character.name}</h4>
+        <h3 className="card__tex--title">{props.character.name}</h3>
         <p className="card__text--specie">{props.character.species}</p>
         <p className="card__text--house">{props.character.house}</p>
       </div>

@@ -1,5 +1,4 @@
 .cardDetail {
-  text-decoration: none;
   &__container {
     padding: 50px 50px;
     display: flex;
@@ -8,7 +7,13 @@
     justify-content: center;
     height: 100vh;
     margin: auto;
+    text-decoration: none;
 
+    @media (min-width: 768px) {
+      margin: 15px;
+      height: 350px;
+      width: 280px;
+    }
     &--btn {
       width: 80px;
       height: 40px;
