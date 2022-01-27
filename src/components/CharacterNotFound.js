@@ -4,12 +4,12 @@ const CharacterNotFound = () => {
   return (
     <>
       <Link to="/" className="Not_found">
-        <p>
-          <i className="fas fa-chevron-double-left">Volver al inicio</i>
-        </p>
+        Volver al inicio
       </Link>
 
-      <p>Oh oh! no existe. Tendremos que proponerselo a J.K. Rowling</p>
+      <h2 className="not_found_message">
+        Oh oh! no existe. Tendremos que proponerselo a J.K. Rowling
+      </h2>
     </>
   );
 };

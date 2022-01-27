@@ -12,7 +12,7 @@ const FilterCharacter = (props) => {
         Busca por personaje:
       </label>
       <input
-        className="form__input--text"
+        className="form__label--select "
         type="text"
         id="name"
         name="name"

@@ -15,24 +15,24 @@ body {
   margin: auto;
   margin-top: 20px;
   text-align: start;
-
   flex-direction: column;
-  text-align: start;
   align-items: flex-start;
-  justify-content: flex-start;
+  font-size: 16px;
+  padding: 10px;
 
   &__input {
     display: flex;
     flex-direction: column;
   }
   &__input--text {
-    // margin-bottom: 7px;
+    margin-bottom: 7px;
     width: 200px;
     height: 25px;
     border: solid 3px orange;
-    // padding: 7px;
+    padding: 7px;
     border-radius: 2px;
     color: grey;
+    background-color: rgb(168, 154, 101);
     ::placeholder {
       color: orange;
     }
@@ -48,6 +48,8 @@ body {
     border-radius: 2px;
     color: grey;
     width: 180px;
+    height: 10px;
+    background-color: rgb(168, 154, 101);
 
     ::value {
       color: rgb(122, 88, 25);
@@ -73,4 +75,11 @@ body {
 
 .fas fa-chevron-double-left {
   color: #f0e7e7;
+}
+.not_found_message {
+  color: antiquewhite;
+}
+
+.Link {
+  text-decoration: none;
 }

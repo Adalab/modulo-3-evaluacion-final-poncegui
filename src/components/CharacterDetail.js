@@ -80,7 +80,7 @@ const CharacterDetail = (props) => {
                 />
               </div>
               <ul className="cardDetail__article--description">
-                <li>{dataDetail.name}</li>
+                <li className="card_title">{dataDetail.name}</li>
                 <li>Especie: {getSpecies()}</li>
                 <li>Género: {getGender()}</li>
                 <li>Estatus: {getStatus()}</li>

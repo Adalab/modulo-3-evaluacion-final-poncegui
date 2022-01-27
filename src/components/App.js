@@ -36,8 +36,7 @@ function App() {
   };
 
   //Reset Btn
-  const handleResetBtn = (ev) => {
-    ev.prevenDefault();
+  const handleResetBtn = () => {
     setDataHouse("Gryffindor");
     setDataGender("all");
     setInputSearch("");

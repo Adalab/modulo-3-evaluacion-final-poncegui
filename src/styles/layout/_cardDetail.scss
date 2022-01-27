@@ -42,7 +42,7 @@
     background-color: #7f0909;
     border-radius: 10px;
 
-    @media all and (min-width: 360px) {
+    @media (max-width: 360px) {
       flex-direction: row;
     }
 
@@ -52,6 +52,12 @@
       height: 450px;
       width: 300px;
       border-bottom: 3px solid #ffc500;
+      border-radius: 10px;
+
+      @media (max-width: 360px) {
+        height: 280px;
+        width: 150px;
+      }
     }
 
     &--description {
@@ -86,4 +92,10 @@
   width: 100px;
   border-radius: 50px;
   position: absolute;
+  transform: translateX(350px);
+}
+
+.card_title {
+  font-size: 32px;
+  margin-bottom: 30px;
 }

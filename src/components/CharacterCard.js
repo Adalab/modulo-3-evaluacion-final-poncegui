@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
+import Hogwarts from "../images/hogwarts.jpeg";
 
 const CharacterCard = (props) => {
   return (
     <Link className="card_Container" to={`character/${props.character.id}`}>
       <img
         className="card__image"
-        src={
-          props.character.image
-            ? props.character.image
-            : "https://via.placeholder.com/210x295/ffffff/666666/?text=gyr"
-        }
+        src={props.character.image ? props.character.image : Hogwarts}
         alt={`Foto de ${props.character.name}`}
         title={`Foto de ${props.character.name}`}
       />
