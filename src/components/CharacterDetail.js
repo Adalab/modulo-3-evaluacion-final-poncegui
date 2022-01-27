@@ -72,12 +72,6 @@ const CharacterDetail = (props) => {
                   alt="character image"
                   title="character image"
                 ></img>
-                <img
-                  className="shield"
-                  src={getShield()}
-                  alt="House shield"
-                  title="House shield"
-                />
               </div>
               <ul className="cardDetail__article--description">
                 <li className="card_title">{dataDetail.name}</li>
@@ -86,6 +80,12 @@ const CharacterDetail = (props) => {
                 <li>Estatus: {getStatus()}</li>
                 <li>Casa: {dataDetail.house}</li>
               </ul>
+              <img
+                className="shield"
+                src={getShield()}
+                alt="House shield"
+                title="House shield"
+              />
             </article>
             <button className="cardDetail__container--btn">
               <i className="fas fa-quidditch"></i> back

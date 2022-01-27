@@ -77,27 +77,28 @@ function App() {
   };
 
   return (
-    <div>
-      <Header className="logo" />
-      <main className="main">
-        <Switch>
-          <Route exact path="/">
-            <Filters
-              handleFilter={handleFilter}
-              inputSearch={inputSearch}
-              selectHouse={dataHouse}
-              selectGender={dataGender}
-              handleResetBtn={handleResetBtn}
-            />
-            <CharacterList characters={characterFiltered} />
-          </Route>
-          <Route path="/character/:id">
-            <CharacterDetail characterDetail={characterDetail()} />
-          </Route>
-        </Switch>
-      </main>
-      <Footer />
-    </div>
+    <>
+      <div>
+        <Header className="logo" />
+        <main className="main">
+          <Switch>
+            <Route exact path="/">
+              <Filters
+                handleFilter={handleFilter}
+                inputSearch={inputSearch}
+                selectHouse={dataHouse}
+                selectGender={dataGender}
+                handleResetBtn={handleResetBtn}
+              />
+              <CharacterList characters={characterFiltered} />
+            </Route>
+            <Route path="/character/:id">
+              <CharacterDetail characterDetail={characterDetail()} />
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    </>
   );
 }
 

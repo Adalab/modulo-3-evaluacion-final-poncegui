@@ -7,8 +7,6 @@
     height: 80vh;
     width: 80%;
     margin: auto;
-    text-decoration: none;
-    list-style: none;
 
     @media (min-width: 768px) {
       padding: 50px 50px;
@@ -18,8 +16,6 @@
       justify-content: center;
       height: 100vh;
       margin: auto;
-      text-decoration: none;
-      list-style: none;
     }
 
     &--btn {
@@ -28,13 +24,13 @@
       justify-content: space-between;
       align-items: flex-start;
       border-radius: 30px;
-      text-decoration: none;
       background-color: rgb(70, 64, 64);
       border-color: #7f0909;
       color: #e6d9d9;
       padding: 7px;
       margin-top: 15px;
       font-weight: bold;
+      cursor: pointer;
 
       &:hover {
         background-color: #af8a11;
@@ -57,13 +53,10 @@
     padding: 20px;
     background-color: #7f0909;
     border-radius: 10px;
-    list-style: none;
-    text-decoration: none;
     margin-top: 60px;
 
     @media (min-width: 768px) {
       flex-direction: row;
-      // margin-top: 100px;
     }
 
     &--photo {
@@ -114,15 +107,12 @@
   height: 80px;
   width: 80px;
   border-radius: 50px;
-  // position: absolute;
-
-  // transform: translateX(-50px);
+  margin-top: 20px;
 
   @media (min-width: 768px) {
-    // transform: translateX(-200px);
-    // transform: translatey(80px);
     height: 100px;
     width: 100px;
+    margin-right: 20px;
   }
 
   @media (min-width: 1200px) {

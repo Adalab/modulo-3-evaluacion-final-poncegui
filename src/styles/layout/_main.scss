@@ -31,13 +31,17 @@ body {
   }
   &__input--text {
     margin-bottom: 7px;
+    margin: 30px;
     width: 200px;
-    height: 25px;
+    height: 40px;
     border: solid 3px orange;
     padding: 7px;
     border-radius: 2px;
     color: rgb(59, 50, 50);
     background-color: rgb(168, 154, 101);
+    font-family: "HARRYP";
+    font-size: 14px;
+    cursor: pointer;
     ::placeholder {
       color: orange;
     }
@@ -47,14 +51,19 @@ body {
   }
 
   &__label--select {
-    margin: 7px 0px 12px 0px;
+    margin: 30px;
     border: solid 3px orange;
     padding: 7px;
-    border-radius: 2px;
+    font-family: "HARRYP";
+    font-size: 14px;
+    cursor: pointer;
     color: rgb(204, 75, 75);
     width: 180px;
-    height: 10px;
+    height: 20px;
     background-color: rgb(168, 154, 101);
+    ::placeholder {
+      color: orange;
+    }
 
     ::value {
       color: rgb(122, 88, 25);
@@ -72,6 +81,14 @@ body {
     margin: auto;
     font-family: "HARRYP";
     font-size: 23px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #af8a11;
+      box-shadow: 3px 3px 10px #7f0909;
+      transform: translatey(-2px);
+      color: #7f0909;
+    }
   }
 }
 
@@ -85,6 +102,9 @@ body {
 }
 .not_found_message {
   color: antiquewhite;
+  font-family: "HARRYP";
+  font-size: 32px;
+  margin: auto;
 }
 
 .Link {
