@@ -8,6 +8,7 @@
     height: 100vh;
     margin: auto;
     text-decoration: none;
+    list-style: none;
 
     @media (min-width: 768px) {
       margin: 15px;
@@ -46,6 +47,8 @@
     padding: 20px;
     background-color: #7f0909;
     border-radius: 10px;
+    list-style: none;
+    text-decoration: none;
 
     @media (max-width: 360px) {
       flex-direction: row;
@@ -69,6 +72,7 @@
       list-style: none;
       color: burlywood;
       margin: 3px 10px;
+      text-decoration: none;
     }
   }
 }

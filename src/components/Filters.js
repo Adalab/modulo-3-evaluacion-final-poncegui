@@ -22,7 +22,7 @@ const Filter = (props) => {
       <button
         className="form__btnReset"
         type="submit"
-        onClick={props.handleBtn}
+        onClick={props.handleResetBtn}
       >
         reset
       </button>
