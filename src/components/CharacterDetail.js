@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Hogwarts from "../images/hogwarts.jpeg";
 
 // houses
 import Gryffindor from "../images/gryffindor.jpg";
@@ -68,9 +69,9 @@ const CharacterDetail = (props) => {
             <article className="cardDetail__article">
               <div className="cardDetail__article--photo">
                 <img
-                  src={dataDetail.image}
-                  alt="character image"
-                  title="character image"
+                  src={dataDetail.image ? dataDetail.image : Hogwarts}
+                  alt={`Foto de ${dataDetail.name}`}
+                  title={`Foto de ${dataDetail.name}`}
                 ></img>
               </div>
               <ul className="cardDetail__article--description">

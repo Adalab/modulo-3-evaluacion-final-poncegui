@@ -24,12 +24,14 @@
       justify-content: space-between;
       align-items: flex-start;
       border-radius: 30px;
-      background-color: rgb(70, 64, 64);
-      border-color: #7f0909;
+      background-color: rgb(17, 15, 15);
+      border-color: #1b1a1a;
       color: #e6d9d9;
       padding: 7px;
       margin-top: 15px;
       font-weight: bold;
+      font-family: "HARRYP";
+      font-size: 16px;
       cursor: pointer;
 
       &:hover {
@@ -50,36 +52,34 @@
     justify-content: center;
     align-items: center;
     border: 3px solid #7f0909;
-    padding: 20px;
+    padding: 20px 0px;
     background-color: #7f0909;
     border-radius: 10px;
     margin-top: 60px;
 
     @media (min-width: 768px) {
       flex-direction: row;
+      margin: auto;
+      padding: 30px;
     }
 
     &--photo {
       display: flex;
       flex-direction: column-reverse;
-      height: 400px;
-      width: 280px;
+      height: 280px;
+      width: 150px;
       border-bottom: 3px solid #ffc500;
-      border-radius: 10px;
-      list-style: none;
-      text-decoration: none;
 
-      @media (max-width: 360px) {
-        height: 280px;
-        width: 150px;
+      @media (min-width: 768px) {
+        height: 350px;
+        width: 250px;
       }
     }
 
     &--description {
       list-style: none;
       color: burlywood;
-      margin: 3px 10px;
-      text-decoration: none;
+      margin-right: 50px;
     }
   }
 }
@@ -121,6 +121,10 @@
 }
 
 .card_title {
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 25px;
+  margin: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
 }
