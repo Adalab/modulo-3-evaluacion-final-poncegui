@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.72034f68.css",
+    "main.css": "./static/css/main.59fc19d0.css",
     "main.js": "./static/js/main.46733a2e.js",
     "static/media/logo.png": "./static/media/logo.7487675e0d984945b4bc.png",
     "static/media/slytherin.jpg": "./static/media/slytherin.f306d0b9560422cd6df7.jpg",
@@ -10,11 +10,11 @@
     "static/media/HARRYP.TTF": "./static/media/HARRYP.a65869c0c1a4b3d4fcfc.TTF",
     "static/media/hogwarts.jpeg": "./static/media/hogwarts.c203bd879c15b1b6b8c8.jpeg",
     "index.html": "./index.html",
-    "main.72034f68.css.map": "./static/css/main.72034f68.css.map",
+    "main.59fc19d0.css.map": "./static/css/main.59fc19d0.css.map",
     "main.46733a2e.js.map": "./static/js/main.46733a2e.js.map"
   },
   "entrypoints": [
-    "static/css/main.72034f68.css",
+    "static/css/main.59fc19d0.css",
     "static/js/main.46733a2e.js"
   ]
 }
