@@ -18,6 +18,7 @@ const FilterCharacter = (props) => {
         name="name"
         value={props.inputSearch}
         onChange={handleInput}
+        placeholder="Ej: Severus Snape"
       />
     </section>
   );

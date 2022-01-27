@@ -61,7 +61,7 @@ const CharacterDetail = (props) => {
   };
 
   return (
-    <Link className="cardDetail" to="/">
+    <Link className="Link" to="/">
       <>
         <div className="cardDetail__container">
           <div>

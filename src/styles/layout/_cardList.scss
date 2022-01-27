@@ -16,9 +16,13 @@
   @media (min-width: 768px) {
     margin: 15px;
     height: 350px;
-    width: 280px;
+    width: 270px;
   }
 
+  @media (min-width: 1200px) {
+    height: 400px;
+    width: 300px;
+  }
   &:hover {
     background-color: #856a13;
     box-shadow: 5px 5px 10px #97823c;
@@ -33,18 +37,24 @@
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   justify-content: center;
+  align-content: center;
   list-style: none;
   text-decoration: none;
+  margin-top: 70px;
 
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 35px 0 35px;
-    margin: 30px;
   }
 
   @media (min-width: 1200px) {
     padding: 0 150px 0 150px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &--card {
+    text-decoration: none;
+    list-style: none;
   }
 }

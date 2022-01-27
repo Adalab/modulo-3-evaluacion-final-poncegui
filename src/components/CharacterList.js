@@ -11,7 +11,7 @@ const CharacterList = (props) => {
     );
   });
   return (
-    <Link className="list" to="/">
+    <Link className="Link" to="/">
       <section className="list">
         <ul className="list__container">
           {props.characters.length === 0 ? (

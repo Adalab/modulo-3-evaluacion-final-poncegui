@@ -1,20 +1,27 @@
 .cardDetail {
   &__container {
-    padding: 50px 50px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
+    width: 80%;
     margin: auto;
     text-decoration: none;
     list-style: none;
 
     @media (min-width: 768px) {
-      margin: 15px;
-      height: 350px;
-      width: 280px;
+      padding: 50px 50px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      height: 100vh;
+      margin: auto;
+      text-decoration: none;
+      list-style: none;
     }
+
     &--btn {
       width: 80px;
       height: 40px;
@@ -22,25 +29,28 @@
       align-items: flex-start;
       border-radius: 30px;
       text-decoration: none;
-      background-color: #ffc500;
+      background-color: rgb(70, 64, 64);
       border-color: #7f0909;
-      color: #7f0909;
+      color: #e6d9d9;
       padding: 7px;
       margin-top: 15px;
+      font-weight: bold;
 
       &:hover {
-        background-color: #aa9039;
-        box-shadow: 5px 5px 10px #d8c27b;
+        background-color: #af8a11;
+        box-shadow: 5px 5px 10px #7f0909;
         transform: translate(-10px);
+        color: #7f0909;
       }
     }
-    @media all and (min-width: 768px) {
+    @media (min-width: 768px) {
       flex-direction: row;
     }
   }
 
   &__article {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 3px solid #7f0909;
@@ -49,18 +59,22 @@
     border-radius: 10px;
     list-style: none;
     text-decoration: none;
+    margin-top: 60px;
 
-    @media (max-width: 360px) {
+    @media (min-width: 768px) {
       flex-direction: row;
+      // margin-top: 100px;
     }
 
     &--photo {
       display: flex;
       flex-direction: column-reverse;
-      height: 450px;
-      width: 300px;
+      height: 400px;
+      width: 280px;
       border-bottom: 3px solid #ffc500;
       border-radius: 10px;
+      list-style: none;
+      text-decoration: none;
 
       @media (max-width: 360px) {
         height: 280px;
@@ -96,12 +110,24 @@
 }
 
 .shield {
-  background-color: red;
-  height: 100px;
-  width: 100px;
+  background-color: rgb(255, 230, 0);
+  height: 80px;
+  width: 80px;
   border-radius: 50px;
-  position: absolute;
-  transform: translateX(350px);
+  // position: absolute;
+
+  // transform: translateX(-50px);
+
+  @media (min-width: 768px) {
+    // transform: translateX(-200px);
+    // transform: translatey(80px);
+    height: 100px;
+    width: 100px;
+  }
+
+  @media (min-width: 1200px) {
+    transform: translateX(350px);
+  }
 }
 
 .card_title {

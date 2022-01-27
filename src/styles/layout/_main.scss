@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "HARRYP";
+  src: url(../../fonts/HARRYP.TTF);
+}
+
 body {
   background-color: rgb(82, 73, 73);
   height: 100vh;
@@ -11,14 +16,14 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   margin: auto;
   margin-top: 20px;
   text-align: start;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 16px;
+  font-size: 32px;
   padding: 10px;
+  font-family: "HARRYP";
 
   &__input {
     display: flex;
@@ -37,7 +42,7 @@ body {
       color: orange;
     }
     ::value {
-      color: orange;
+      color: rgb(31, 30, 28);
     }
   }
 
@@ -46,7 +51,7 @@ body {
     border: solid 3px orange;
     padding: 7px;
     border-radius: 2px;
-    color: rgb(59, 53, 53);
+    color: rgb(204, 75, 75);
     width: 180px;
     height: 10px;
     background-color: rgb(168, 154, 101);
@@ -63,8 +68,10 @@ body {
     box-shadow: 1px rgb(122, 88, 25);
     background-color: rgb(85, 40, 29);
     color: whitesmoke;
-    margin-top: 10px;
+    margin-top: 16px;
     margin: auto;
+    font-family: "HARRYP";
+    font-size: 23px;
   }
 }
 
