@@ -41,6 +41,7 @@
   list-style: none;
   text-decoration: none;
   margin-top: 70px;
+  padding: 0px;
 
   @media (min-width: 768px) {
     display: grid;
@@ -51,10 +52,5 @@
   @media (min-width: 1200px) {
     padding: 0 150px 0 150px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  &--card {
-    text-decoration: none;
-    list-style: none;
   }
 }
