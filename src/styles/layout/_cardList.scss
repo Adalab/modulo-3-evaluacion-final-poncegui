@@ -29,15 +29,18 @@
 
 .list__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 50px;
+  grid-template-columns: 1fr;
+  justify-content: center;
 
-  @media all and (max-width: 320px) {
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 35px 0 35px;
+    margin: 30px;
   }
 
-  @media all and (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 1200px) {
+    padding: 0 150px 0 150px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

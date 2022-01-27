@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 // houses
 import Gryffindor from "../images/gryffindor.jpg";
 import Ravenclaw from "../images/ravenclaw.jpg";
-import Slytherin from "../images/slytherin.jpeg";
-import Hufflepuff from "../images/hufflepuff.png";
+import Slytherin from "../images/slytherin.jpg";
+import Hufflepuff from "../images/hufflepuff.jpg";
 
 const alive = (
   <li>
@@ -64,9 +64,6 @@ const CharacterDetail = (props) => {
     <Link className="cardDetail" to="/">
       <>
         <div className="cardDetail__container">
-          <button className="cardDetail__container--btn">
-            <i className="fas fa-quidditch"></i>
-          </button>
           <div>
             <article className="cardDetail__article">
               <div className="cardDetail__article--photo">
@@ -84,12 +81,15 @@ const CharacterDetail = (props) => {
               </div>
               <ul className="cardDetail__article--description">
                 <li>{dataDetail.name}</li>
-                <li>Estatus: {getStatus()}</li>
                 <li>Especie: {getSpecies()}</li>
                 <li>Género: {getGender()}</li>
+                <li>Estatus: {getStatus()}</li>
                 <li>Casa: {dataDetail.house}</li>
               </ul>
             </article>
+            <button className="cardDetail__container--btn">
+              <i className="fas fa-quidditch"></i> back
+            </button>
           </div>
         </div>
       </>
