@@ -43,6 +43,7 @@ function App() {
     setDataHouse("Gryffindor");
     setDataGender("all");
     setInputSearch("");
+    setDataActor("");
   };
 
   //Filtros aplicados; character & house
