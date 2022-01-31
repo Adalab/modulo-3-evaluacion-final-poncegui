@@ -1,6 +1,7 @@
 import FilterCharacter from "./FilterCharacter";
 import FilterHouse from "./FilterHouse";
 import FilterGender from "./FilterGender";
+import FilterActor from "./FilterActor";
 
 const Filter = (props) => {
   return (
@@ -17,6 +18,10 @@ const Filter = (props) => {
         <FilterGender
           handleFilter={props.handleFilter}
           selectGender={props.dataGender}
+        />
+        <FilterActor
+          handleFilter={props.handleFilter}
+          selectActor={props.dataActor}
         />
       </form>
       <button

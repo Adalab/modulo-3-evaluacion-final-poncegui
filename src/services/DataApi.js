@@ -13,6 +13,7 @@ const getDataFromApi = (dataHouse) => {
           house: character.house,
           gender: character.gender,
           status: character.alive,
+          actor: character.actor,
         };
       });
       return cleanData;

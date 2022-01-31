@@ -7,7 +7,7 @@ import getDataFromApi from "../services/DataApi";
 import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 //Services
 
@@ -17,6 +17,7 @@ function App() {
   const [inputSearch, setInputSearch] = useState("");
   const [dataList, setDataList] = useState([]);
   const [dataGender, setDataGender] = useState("all");
+  const [dataActor, setDataActor] = useState("");
 
   useEffect(() => {
     getDataFromApi(dataHouse).then((response) => {
@@ -32,6 +33,8 @@ function App() {
       setDataHouse(data.value);
     } else if (data.key === "gender") {
       setDataGender(data.value);
+    } else if (data.key === "actor") {
+      setDataActor(data.value);
     }
   };
 
@@ -61,6 +64,9 @@ function App() {
       } else if (dataGender === character.gender) {
         return character.gender;
       }
+    })
+    .filter((character) => {
+      return character.actor.toLowerCase().includes(dataActor.toLowerCase());
     });
 
   //Route
@@ -88,6 +94,7 @@ function App() {
                 inputSearch={inputSearch}
                 selectHouse={dataHouse}
                 selectGender={dataGender}
+                selectActor={dataActor}
                 handleResetBtn={handleResetBtn}
               />
               <CharacterList characters={characterFiltered} />
