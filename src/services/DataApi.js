@@ -1,7 +1,7 @@
 import { v4 as uuid } from "uuid";
 
 const getDataFromApi = (dataHouse) => {
-  return fetch(`http://hp-api.herokuapp.com/api/characters/house/${dataHouse}`)
+  return fetch(`https://hp-api.herokuapp.com/api/characters/house/${dataHouse}`)
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.map((character) => {
