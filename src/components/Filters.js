@@ -3,7 +3,7 @@ import FilterHouse from "./FilterHouse";
 import FilterGender from "./FilterGender";
 import FilterActor from "./FilterActor";
 
-const Filter = (props) => {
+const Filter = props => {
   return (
     <section className="form">
       <form className="form" onSubmit={(ev) => ev.preventDefault()}>
